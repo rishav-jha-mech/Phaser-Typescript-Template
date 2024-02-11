@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack --watch & live-server --port=8085",
-    "prepare": "husky"
+    "prettier:format": "prettier --write \"src/**/*.ts\""
   },
   "keywords": [],
   "author": "",
@@ -22,7 +22,9 @@
     "webpack": "^5.90.1",
     "webpack-cli": "^5.1.4"
   },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier:format"
+    }
   }
 }

@@ -1,8 +1,7 @@
 {
   "name": "phaser-template",
   "version": "1.0.0",
-  "description": "",
-  "main": "bomb.js",
+  "description": "Phaser typescript template to get started with your project sooner",
   "scripts": {
     "build": "webpack",
     "start": "webpack --watch & live-server --port=8085",

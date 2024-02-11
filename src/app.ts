@@ -1,13 +1,13 @@
 import "phaser";
 
-class PhaserTemplateScene extends Phaser.Scene {
+export default class PhaserTemplateScene extends Phaser.Scene {
   constructor() {
     super({ key: "PhaserTemplateScene" });
   }
 
   preload() {
-    this.load.image("phaser", "phaser.png");
-    this.load.image("ts", "ts.png");
+    this.load.image("phaser", "assets/phaser.png");
+    this.load.image("ts", "assets/ts.png");
   }
 
   create() {
@@ -60,12 +60,6 @@ const config: Phaser.Types.Core.GameConfig = {
   },
   parent: "game",
   scene: [PhaserTemplateScene],
-  callbacks: {
-    postBoot: function (game) {
-      game.canvas.style.width = "100%";
-      game.canvas.style.height = "100%";
-    },
-  },
 };
 
 new Phaser.Game(config);

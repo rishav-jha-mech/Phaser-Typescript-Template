@@ -26,5 +26,8 @@
     "hooks": {
       "pre-commit": "npm run prettier:format"
     }
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
